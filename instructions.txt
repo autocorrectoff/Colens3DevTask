@@ -1,0 +1,39 @@
+Task description
+
+Create a Python application which will enable processing of files from AWS S3 bucket and store processing data within the local database.
+
+Processing workflow
+Initiate processing
+Via API
+Via CLI
+Fetch files from AWS S3 Bucket
+Support fetching of all existing files from S3 Bucket
+Support fetching of some specific file from S3 Bucket
+Calculate content hash for every file
+Save processing information to DB
+File S3 Bucket
+File name
+File content hash
+Timestamp
+
+Additional Notes
+Enable getting of processed data from the DB via API and CLI
+Use framework/lib of choice (Flask, FastAPI, …)
+Use DB of choice
+Place code on the public git repository (GitHub, GitLab, …)
+Add details to the readme file
+Task description
+How to run the code
+How to run the tests
+Dockerizing the solution would be a plus
+
+What to focus on
+Clean and readable code
+Separation of concerns
+Separation of layers (API, service, DB, …)
+Create at least one unit test for each of the layers
+Create at least one integration test for API and DB layer
+
+
+
+

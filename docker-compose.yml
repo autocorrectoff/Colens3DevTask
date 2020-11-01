@@ -1,0 +1,27 @@
+version: '3.5'
+
+networks:
+  cpt_network:
+    name: cpt_network
+
+services:
+
+  cpt_app:
+    container_name: cpt_app
+    build:
+      dockerfile: Dockerfile
+      context: .
+    ports:
+      - "5000:5000"
+    networks: 
+      - cpt_network
+    restart: on-failure
+    environment:
+      AWS_ACCESS_KEY: <enter your access key here>
+      AWS_SECRET_KEY: <enter your private key here>
+
+  redis_instance:
+    container_name: redis_instance
+    image: 'redis:latest'
+    networks: 
+      - cpt_network
